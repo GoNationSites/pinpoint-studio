@@ -49,41 +49,50 @@ export default {
       of: [{ type: 'image' }],
     },
     {
+      title: 'Categories',
+      name: 'categories',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'category' } }],
+    },
+    {
       name: 'footerBlurb',
       title: 'Footer Text',
       type: 'text',
     },
     {
-      title: 'Footer Block',
-      name: 'loot',
-      type: 'array',
-      of: [
-        {
-          type: '',
-        },
-      ],
-      fields: [
-        {
-          title: 'Heading',
-          name: 'heading',
-          type: 'string',
-
-          // Here the user will be prompted to write any string to describe the resource type.
-          // There is a way to limit this to a number of preset strings and provide a pull-down
-          // or radio buttons to select resource. This is left as an exercise for the reader! See
-          // the reference docs!
-        },
-        {
-          title: 'Bullet Points',
-          name: 'bulletPoints',
-          type: 'array',
-          of: [
-            {
-              type: 'string',
-            },
-          ],
-        },
-      ],
+      name: 'stats',
+      title: 'Stats',
+      type: 'blockContent',
     },
+    // {
+    //   title: 'Footer Block',
+    //   name: 'loot',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       type: 'reference',
+    //       to: {
+    //         type: 'category',
+    //       },
+    //     },
+    //   ],
+    //   // fields: [
+    //   //   {
+    //   //     title: 'Heading',
+    //   //     name: 'heading',
+    //   //     type: 'string',
+    //   //   },
+    //   //   {
+    //   //     title: 'Bullet Points',
+    //   //     name: 'bulletPoints',
+    //   //     type: 'array',
+    //   //     of: [
+    //   //       {
+    //   //         type: 'string',
+    //   //       },
+    //   //     ],
+    //   //   },
+    //   // ],
+    // },
   ],
 };
